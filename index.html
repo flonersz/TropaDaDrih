@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TropaDaDrih</title>
+    <link rel="stylesheet" href="gift.css">
+    <script src="gift.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">TropaDaDrih</a>
+        <div class="member">
+            <img src="member (2).png" alt="member" width="50px">
+            <h1 id="membro"></h1>
+            <script>
+                const html = document.getElementById("membro")
+                fetch("https://discord.com/api/v9/invites/tropadadrih?with_counts=true")
+                .then(response => response.json())
+                .then(data => {
+                    html.innerHTML = data.approximate_member_count; /*html.innerHTML = String(data.approximate_member_count).substr(0,1) + "K"*/
+                }
+                )
+            </script>
+        </div>
+    </header>
+    <div class="text">
+        <div class="central">
+            <h1>Tropa da Drih is DAO Comunity<br>
+            It's a profit-oriented community.
+            <h2>Come be part of our community, and profit together with usclick the button below to join our discord!</h2>
+            <button class="btn" onclick="window.location.href='https://discord.gg/tropadadrih'">JOIN</button>
+        </div>
+        <div class="container">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+          <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+              <img class="imagem1" src="lucro1.png" alt="lucro">
+            </label>
+            <label class="card" for="item-2" id="song-2">
+              <img class="imagem1" src="lucro2.png" alt="lucro">
+            </label>
+            <label class="card" for="item-3" id="song-3">
+              <img  class="imagem1" src="lucro3.png" alt="lucro">
+            </label>
+          </div>
+        </div>
+    </div>
+    <div class="retangulo">
+      <div class="stats">
+          <div class="status">
+              <h1>425 ETH</h1>
+              <h3>Earnings</h3>
+          </div>
+          <div class="status">
+              <h1 text-align="center">MEMBERS</h1>
+              <h3>12k+</h3>
+          </div>
+          <div class="status">
+              <h1 text-align="center">ENTRIES</h1>
+              <h3>1k+</h3>
+          </div>
+          <div class="status">
+              <h1 text-align="center">FOLLOWS</h1>
+              <h3>10k+</h3>
+          </div>
+      </div>
+  </div>
+    <!-- <div class="rodape">
+        <h3>&copy;TropaDaDrih</h3>
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html> 
